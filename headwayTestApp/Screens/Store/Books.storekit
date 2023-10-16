@@ -1,0 +1,145 @@
+{
+  "identifier" : "889A0579",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "7.99",
+      "familyShareable" : false,
+      "internalID" : "04FFC6C0",
+      "localizations" : [
+        {
+          "description" : "Hitchhiker's Guide to the Galaxy",
+          "displayName" : "Hitchhiker's Guide to the Gala",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.headway.HitchhikerGalaxy",
+      "referenceName" : "Hitchhiker's Guide to the Galaxy",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "A4A8A290",
+      "localizations" : [
+        {
+          "description" : "Ready Player One",
+          "displayName" : "Ready Player One",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.headway.ReadyPlayerOne",
+      "referenceName" : "Ready Player One",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "406BCC1E",
+      "localizations" : [
+        {
+          "description" : "Ready Player Two",
+          "displayName" : "Ready Player Two",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.headway.ReadyPlayerTwo",
+      "referenceName" : "Ready Player Two",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "00A2A920",
+      "localizations" : [
+
+      ],
+      "name" : "Books",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "10.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "4BC85A1C",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "All Books",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.headway.AllBooks",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "All Books",
+          "subscriptionGroupID" : "00A2A920",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
