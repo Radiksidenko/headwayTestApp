@@ -93,7 +93,7 @@ struct BookPlayerReducer: ReducerProtocol {
         case .changeRate:
             state.currentRate = state.currentRate == 2 ? 1 : state.currentRate + 0.25
 //            state.currentRate += 0.25 //For Fun 😅
-            state.rateButtonTitle = "Speed \(state.currentRate)"
+            state.rateButtonTitle = "Speed \(state.currentRate)x"
             audioManager.change(rate: state.currentRate)
         }
         return .none

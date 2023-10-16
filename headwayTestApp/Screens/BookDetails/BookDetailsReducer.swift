@@ -56,7 +56,7 @@ struct BookDetailsReducer: ReducerProtocol {
             
             guard let inAppId = inAppId,
                   let product = await skManager.fetchOneProduct(id: inAppId),
-                  let subscription = await skManager.fetchOneProduct(id: "com.headway.AllBooks")
+                  let subscription = await skManager.fetchOneProduct(id: MockStoreKit.subscriptionsIds[0])
             else { return await send(.productLoaded(.failure(BaseError.somethingWentWrong)))}
             await send(.productLoaded(.success(product)))
             await send(.subscriptionLoaded(.success(subscription)))
@@ -68,7 +68,7 @@ struct BookDetailsReducer: ReducerProtocol {
        
         return .run { send in
             
-            guard let product = await skManager.fetchOneProduct(id: "com.headway.AllBooks") //TODO: Edit
+            guard let product = await skManager.fetchOneProduct(id: MockStoreKit.subscriptionsIds[0]) //TODO: Edit
             else { return await send(.productLoaded(.failure(BaseError.somethingWentWrong)))}
             
             
@@ -120,7 +120,7 @@ struct BookDetailsReducer: ReducerProtocol {
                 state.subscription = nil
             }
             return .run { send in
-                let product = await skManager.isPurchased(productID: "com.headway.AllBooks")
+                let product = await skManager.isPurchased(productID: MockStoreKit.subscriptionsIds[0])
                 await send(.isPurchased(product))
             }
             

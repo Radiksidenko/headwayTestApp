@@ -25,7 +25,7 @@ struct PlaceholderImage: View {
                 .frame(height: 300, alignment: .center)
                 .padding(.top, 30)
 //                .onAppear {
-//                    self.displayData.fetchImage { image in
+//                    .fetchImage { image in
 //                        self.bookImage = image
 //                    }
 //                }

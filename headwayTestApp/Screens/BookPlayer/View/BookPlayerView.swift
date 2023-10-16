@@ -28,7 +28,7 @@ struct BookPlayerView: View {
                     PlaceholderImage(
                         title: viewStore.book?.title ?? "",
                         description: viewStore.book?.description ?? "",
-                        imageString: viewStore.book?.imageString ?? "HitchhikerGuide" // Change to Blank
+                        imageString: viewStore.book?.imageString ?? "book.fill" // Change to Blank
                     )
                     
                     SliderControl(viewStore: viewStore)

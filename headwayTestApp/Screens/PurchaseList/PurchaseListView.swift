@@ -25,7 +25,7 @@ struct PurchaseListView: View {
                         }).padding(.top, 30)
                     }
                     if let myBooksShelf = viewStore.mySubscriptionsShelf {
-                        BookShelf(bookShelf: myBooksShelf, onTapped: { _ in
+                        BookShelf(bookShelf: myBooksShelf, onTapped: { _ in // Add New Shelf for Subscriptions
                             print("mySubscriptionsShelf")
                         }).padding(.top, 30)
                     }

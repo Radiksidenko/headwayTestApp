@@ -13,6 +13,14 @@ struct MainStruct: App {
     @State var endanimated: Bool = false
     @State var audioManager: AudioManager = .init()
     
+    enum Style {
+        enum Image {
+            static let book = "book.fill"
+            static let myBook = "books.vertical.fill"
+        }
+        static let bookPageTitle = "Books" //Add Localization
+        static let myBookPageTitle = "My Book"
+    }
     var body: some Scene {
         WindowGroup {
             ZStack{
@@ -20,15 +28,15 @@ struct MainStruct: App {
                     Home()
                         .environmentObject(audioManager)
                         .tabItem {
-                            Image(systemName: "book.fill")
-                            Text("Books")
+                            Image(systemName: Style.Image.book)
+                            Text(Style.bookPageTitle)
                         }
                     
                     PurchaseList()
                         .environmentObject(audioManager)
                         .tabItem {
-                            Image(systemName: "books.vertical.fill")
-                            Text("My Book")
+                            Image(systemName: Style.Image.myBook)
+                            Text(Style.myBookPageTitle)
                         }
                 }
                 

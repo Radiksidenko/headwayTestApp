@@ -16,7 +16,7 @@ private enum Style {
     static let basePadding = 15.0
 }
 
-struct BottomSheet: View {
+struct BottomSheet: View {//Edit
     
     let buttonHeight: CGFloat = 55
     let action: () -> Void

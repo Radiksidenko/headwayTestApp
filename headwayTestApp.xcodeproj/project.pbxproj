@@ -140,6 +140,7 @@
 		7C04F88D2AD8394500E71562 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7C7DDCCA2ADC623700DC217B /* Books.storekit */,
 				7C7DDCDD2ADD990D00DC217B /* Extension */,
 				7CCB62042AD5A23900DE8AAD /* Preview Content */,
 				7CCB62022AD5A23900DE8AAD /* Assets.xcassets */,
@@ -170,7 +171,7 @@
 		7C04F89B2AD8929100E71562 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				7C7DDCC92ADC621B00DC217B /* Store */,
+				7C7DDCD62ADD416E00DC217B /* PurchaseList */,
 				7C0CDA172AD6E6E900E4569B /* SplashScreen */,
 				7C7DDCC42ADC4E5700DC217B /* BookPlayer */,
 				7C04F8902AD84B6800E71562 /* BookDetails */,
@@ -209,15 +210,6 @@
 				7C7DDCC72ADC4EBC00DC217B /* BookPlayerReducer.swift */,
 			);
 			path = BookPlayer;
-			sourceTree = "<group>";
-		};
-		7C7DDCC92ADC621B00DC217B /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				7C7DDCD62ADD416E00DC217B /* PurchaseList */,
-				7C7DDCCA2ADC623700DC217B /* Books.storekit */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		7C7DDCD62ADD416E00DC217B /* PurchaseList */ = {
