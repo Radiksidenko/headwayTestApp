@@ -17,6 +17,7 @@ struct BookShelf: View {
                 .font(.largeTitle)
                 .multilineTextAlignment(.leading)
                 .padding(.leading, 15)
+                .accessibilityIdentifier(AccessibilityIdentifier.BookShelf.titleLabel.rawValue)
             
             ScrollView(.horizontal, showsIndicators: false, content: {
                 HStack {
@@ -27,7 +28,7 @@ struct BookShelf: View {
                             }, label: {
                                 PictureView(book: book)
                             }
-                        )
+                        ).accessibilityIdentifier(AccessibilityIdentifier.BookShelf.pictureView.rawValue)
                     }
                 }
             })
@@ -45,6 +46,7 @@ private struct PictureView: View {
                 .resizable()
                 .frame(width: 120.0, height: 180.0)
                 .cornerRadius(10)
+                .accessibilityIdentifier(AccessibilityIdentifier.BookShelf.bookImage.rawValue)
             
             Text(book.title)
                 .fontWeight(.bold)
@@ -53,6 +55,7 @@ private struct PictureView: View {
                 .font(.subheadline)
                 .lineLimit(2)
                 .frame(height: 40.0)
+                .accessibilityIdentifier(AccessibilityIdentifier.BookShelf.bookTitle.rawValue)
         }
         .frame(width: 150)
     }

@@ -41,6 +41,7 @@ struct PlaceholderImage: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .frame(height: 60)
+                .accessibilityIdentifier(AccessibilityIdentifier.PlaceholderImage.titleLabel.rawValue)
             
             if !secondDescription.isEmpty {
                 Text(secondDescription)

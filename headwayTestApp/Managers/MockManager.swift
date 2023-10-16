@@ -28,10 +28,17 @@ extension BookShelfModel {
 }
 
 //MARK: -Book-
+
 enum AudioContentMock {
+#if E2ETest
+    static let sample1 = URL(fileURLWithPath: Bundle(for: headwayTestAppUITests.self).path(forResource: "HitchhikerGuide", ofType: "mp3")!)
+    static let sample2 = URL(fileURLWithPath:Bundle(for: headwayTestAppUITests.self).path(forResource: "ReadyPlayerOne", ofType: "mp3")!)
+    static let sample3 = URL(fileURLWithPath:Bundle(for: headwayTestAppUITests.self).path(forResource: "ReadyPlayerTwo", ofType: "mp3")!)
+#else
     static let sample1 = URL(fileURLWithPath: Bundle.main.path(forResource: "HitchhikerGuide", ofType: "mp3")!)
     static let sample2 = URL(fileURLWithPath: Bundle.main.path(forResource: "ReadyPlayerOne", ofType: "mp3")!)
     static let sample3 = URL(fileURLWithPath: Bundle.main.path(forResource: "ReadyPlayerTwo", ofType: "mp3")!)
+#endif
 }
 
 extension Book {

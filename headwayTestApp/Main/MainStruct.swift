@@ -11,7 +11,6 @@ import SwiftUI
 struct MainStruct: App {
     
     @State var endanimated: Bool = false
-    @State var audioManager: AudioManager = .init()
     
     enum Style {
         enum Image {
@@ -26,14 +25,12 @@ struct MainStruct: App {
             ZStack{
                 TabView {
                     Home()
-                        .environmentObject(audioManager)
                         .tabItem {
                             Image(systemName: Style.Image.book)
                             Text(Style.bookPageTitle)
                         }
                     
                     PurchaseList()
-                        .environmentObject(audioManager)
                         .tabItem {
                             Image(systemName: Style.Image.myBook)
                             Text(Style.myBookPageTitle)

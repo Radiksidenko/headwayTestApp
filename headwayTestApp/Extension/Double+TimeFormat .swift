@@ -6,7 +6,7 @@
 //
 
 extension Double {
-    var timeFormat: String {
+    var timeFormat: String { //Yep :)
         let hours = Int(Int(self) / 3600)
         let minutes = Int(Int(self) % 3600 / 60)
         let seconds = Int((Int(self) % 3600) % 60)

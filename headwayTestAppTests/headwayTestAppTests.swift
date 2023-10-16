@@ -7,30 +7,42 @@
 
 import XCTest
 @testable import headwayTestApp
+import SwiftUI
+import SnapshotTesting
+
+private func getSize() -> CGRect {
+    return CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+}
 
 final class headwayTestAppTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testHomeScreen() {
+        
+        let homeScreen = Home()
+        let view: UIView = UIHostingController(rootView: homeScreen).view
+        view.frame = getSize()
+        assertSnapshot(matching: view, as: .image)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testBookShelf() {
+        
+        let bookShelfModel = BookShelfModel.sample[0]
+        let bookShelfView = BookShelf(bookShelf: bookShelfModel, onTapped: {_ in })
+        let view: UIView = UIHostingController(rootView: bookShelfView).view
+        view.frame = getSize()
+        assertSnapshot(matching: view, as: .image)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testPlaceholderImage() {
+        
+        let book = Book.sample1
+        let placeholderImage = PlaceholderImage(
+            title: book.title,
+            description: book.description,
+            imageString: book.imageString
+        )
+        let view: UIView = UIHostingController(rootView: placeholderImage).view
+        view.frame = getSize()
+        assertSnapshot(matching: view, as: .image)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
